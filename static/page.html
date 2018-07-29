@@ -1,0 +1,63 @@
+<div ng-controller="pageController" class="container-fluid">     
+      <form ng-submit="generate()">
+
+
+        <!-- Title -->
+    <div>
+        Event Title: <input type="text" id="Title" ng-model="data.eventTitle"></input> <br>
+
+    </div>
+
+    <!-- DATE -->
+
+    <legend>Choose Date:</legend>
+
+    <div>
+        <legend>Start Date:</legend>
+        <input type="date" id="start_date"/>
+        <legend>Start Time: </legend>
+        <input type="time" id="start-time">
+    </div>
+    <div>
+        <legend>End Date:</legend>
+        <input type="date" id="end_date"/>
+        <legend>End Time: </legend>
+        <input id="end_time" type="time">
+    </div>
+    <br>
+    <!--Repeat-->
+    <input type="radio" name="repeat_tag" id="repeat"> Does not repeat<br>
+    <input type="radio" name="repeat_tag" id="repeat"> Weekly<br>
+    <input type="radio" name="repeat_tag" id="repeat"> Monthly<br>
+    <input type="radio" name="repeat_tag" id="repeat"> Annually<br>
+    <input type="radio" name="repeat_tag" id="repeat"> Every Weekday (Monday to Friday)<br> <br>
+
+
+    <!--Color-->
+    <h1>color</h1>
+    <select ng-model="data.color" class="form-control">
+        <option value="Tomato">Tomato</option>
+        <option value="Flamingo">Flamigo</option>
+        <option value="Tangerine">Tangerine</option>
+        <option value="Banana">Banana</option>
+        <option value="Sage">Sage</option>
+        <option value="Basil">Basil</option>
+        <option value="Peacock">Peacock</option>
+        <option value="Blueberry">Blueberry</option>
+        <option value="Lavender">Lavender</option>
+        <option value="Grape">Grape</option>
+        <option value="Graphite">Graphite</option>
+    </select>
+
+
+    <!--Busy-->
+    <p>Busy?<p>
+    <br>
+    <input type="radio" name="busy" id="busy"> yeet<br>
+    <input type="radio" name="busy" id="busy"> neet<br>
+
+        <div class="btn-group">
+          <button class="btn btn-primary" id="generateTest" ng-click="generate()">print 1 in console</button>
+        </div>
+      </form>
+</div>
