@@ -10,31 +10,40 @@
 
     <!-- DATE -->
 
-    <legend>Choose Date:</legend>
+    <h3>Choose Date:</h3>
 
     <div>
         <legend>Start Date:</legend>
-        <input type="date" id="start_date"/>
+        <input type="date" id="start_date"></input>
         <legend>Start Time: </legend>
-        <input type="time" id="start-time">
+        <input type="time" id="start-time"></input>
     </div>
     <div>
         <legend>End Date:</legend>
-        <input type="date" id="end_date"/>
+        <input type="date" id="end_date"></input>
         <legend>End Time: </legend>
-        <input id="end_time" type="time">
+        <input id="end_time" type="time"></input>
     </div>
     <br>
     <!--Repeat-->
-    <input type="radio" name="repeat_tag" id="repeat"> Does not repeat<br>
+    <h3>repeating</h3>
+    <select ng-model= "data.repeat" class = "form-control">
+        <option value = "never">Does Not Repeat</option>
+        <option value = "weekly">Weekly</option>
+        <option value = "monthly">Monthly</option>
+        <option value = "annually">Annually</option>
+        <option value = "everyWeekday">Every Weekday (Monday to Friday)</option>
+    <!-- <input type="radio" name="repeat_tag" id="repeat"> Does not repeat<br>
     <input type="radio" name="repeat_tag" id="repeat"> Weekly<br>
     <input type="radio" name="repeat_tag" id="repeat"> Monthly<br>
     <input type="radio" name="repeat_tag" id="repeat"> Annually<br>
-    <input type="radio" name="repeat_tag" id="repeat"> Every Weekday (Monday to Friday)<br> <br>
+    <input type="radio" name="repeat_tag" id="repeat"> Every Weekday (Monday to Friday)<br> <br> -->
+    </select>
+
 
 
     <!--Color-->
-    <h1>color</h1>
+    <h3>color</h3>
     <select ng-model="data.color" class="form-control">
         <option value="Tomato">Tomato</option>
         <option value="Flamingo">Flamigo</option>
@@ -51,10 +60,11 @@
 
 
     <!--Busy-->
-    <p>Busy?<p>
-    <br>
-    <input type="radio" name="busy" id="busy"> yeet<br>
-    <input type="radio" name="busy" id="busy"> neet<br>
+    <h3>Busy?</h3>
+    <select ng-model="data.busy" class= "form-control">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
 
         <div class="btn-group">
           <button class="btn btn-primary" id="generateTest" ng-click="generate()">print 1 in console</button>

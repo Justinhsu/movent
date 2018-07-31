@@ -15,7 +15,9 @@
   app.controller('pageController', function($http, $scope, $interval, $timeout) {
     $scope.data = {
       eventTitle: "",
-      color: ""
+      color: "",
+      repeat: "",
+      busy:""
     };
 
 
