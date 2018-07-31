@@ -10,19 +10,13 @@
 
     <!-- DATE -->
 
-    <h3>Choose Date:</h3>
+    <h3>dates</h3>
 
     <div>
-        <legend>Start Date:</legend>
-        <input type="date" id="start_date"></input>
-        <legend>Start Time: </legend>
-        <input type="time" id="start-time"></input>
-    </div>
-    <div>
-        <legend>End Date:</legend>
-        <input type="date" id="end_date"></input>
-        <legend>End Time: </legend>
-        <input id="end_time" type="time"></input>
+        <input type="datetime-local"
+               min="2018-06-07T00:00" max="2218-06-14T00:00" ng-model="data.startDateTime">Start Date/Time</input>
+        <input type="datetime-local"
+               min="2018-06-07T00:00" max="2218-06-14T00:00" ng-model="data.endDateTime">End Date/Time</input>
     </div>
     <br>
     <!--Repeat-->
@@ -52,7 +46,7 @@
         <option value="Sage">Sage</option>
         <option value="Basil">Basil</option>
         <option value="Peacock">Peacock</option>
-        <option value="Blueberry">Blueberry</option>
+        <option value="Blueberry">Blueberry</option>xx
         <option value="Lavender">Lavender</option>
         <option value="Grape">Grape</option>
         <option value="Graphite">Graphite</option>
@@ -67,7 +61,7 @@
     </select>
 
         <div class="btn-group">
-          <button class="btn btn-primary" id="generateTest" ng-click="generate()">print 1 in console</button>
+          <button class="btn btn-primary" id="generateTest" ng-click="generate()">Add to Calendar!</button>
         </div>
       </form>
 </div>

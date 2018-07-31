@@ -17,7 +17,9 @@
       eventTitle: "",
       color: "",
       repeat: "",
-      busy:""
+      busy: "",
+      startDateTime:"",
+      endDateTime:""
     };
 
 
