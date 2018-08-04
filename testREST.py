@@ -13,7 +13,7 @@ from oauth2client import file as oauth_file, client, tools
 # from werkzeug.security import safe_join
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = 'https://www.googleapis.com/auth/calendar.readonly'
+SCOPES = 'https://www.googleapis.com/auth/calendar'
 app = Flask(__name__)
 
 
@@ -36,16 +36,17 @@ def generateGraphs():
 
 		#call the calendar api
 		now = datetime.datetime.utcnow().isoformat() + 'Z' # Z indicates UTC time
-		print('Getting the upcoming 10 events')
-		events_result = service.events().list(calendarID='primary', timeMin=now, maxResults=10, singleEvents=True, orderBy='startTime').execute()
-		events = events_result.get('items', [])
+		# print('Getting the upcoming 10 events')
+		# events_result = service.events().list(calendarId='primary', timeMin=now, maxResults=10, singleEvents=True, orderBy='startTime').execute()
+		# events = events_result.get('items', [])
 
-		if not events:
-			print('no upcoming events found.')
-		for event in events:
-			start = event['start'].get('datetime', event['start'].get('date'))
-			print(start, event['summary'])
+		# if not events:
+		# 	print('no upcoming events found.')
+		# for event in events:
+		# 	start = event['start'].get('datetime', event['start'].get('date'))
+		# 	print(start, event['summary'])
 	    # creds = store.get()
+		data = service.events().insert(calendarId='primary',body=data).execute()
 	return app.send_static_file('index.html')
 
 ##################### ERROR HANDLING ###########################################

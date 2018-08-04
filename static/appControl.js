@@ -14,12 +14,16 @@
 
   app.controller('pageController', function($http, $scope, $interval, $timeout) {
     $scope.data = {
-      eventTitle: "",
+      summary: "",
       color: "",
-      repeat: "",
+      repeat: "RRULE:FREQ=DAILY;COUNT=2", //FIX LATER
       busy: "",
-      startDateTime:"",
-      endDateTime:""
+      start: {
+        dateTime: null,
+      },
+      end: {
+        dateTime: null,
+      }
     };
 
 
