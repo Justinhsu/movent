@@ -46,6 +46,7 @@ def generateGraphs():
 		# 	start = event['start'].get('datetime', event['start'].get('date'))
 		# 	print(start, event['summary'])
 	    # creds = store.get()
+
 		data = service.events().insert(calendarId='primary',body=data).execute()
 	return app.send_static_file('index.html')
 

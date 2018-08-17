@@ -16,14 +16,14 @@
     $scope.data = {
       summary: "",
       color: "",
-      repeat: "RRULE:FREQ=DAILY;COUNT=2", //FIX LATER
-      busy: "",
       start: {
         dateTime: null,
       },
       end: {
         dateTime: null,
-      }
+      },
+      transparency:"",
+      recurrence: {}
     };
 
 

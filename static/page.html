@@ -21,12 +21,12 @@
     <br>
     <!--Repeat-->
     <h3>repeating</h3>
-    <select ng-model= "data.repeat" class = "form-control">
-        <option value = "never">Does Not Repeat</option>
-        <option value = "weekly">Weekly</option>
-        <option value = "monthly">Monthly</option>
-        <option value = "annually">Annually</option>
-        <option value = "everyWeekday">Every Weekday (Monday to Friday)</option>
+    <select ng-model= "data.recurrence" class = "form-control">
+        <option value = []>Does Not Repeat</option> <!--never is empty string bc thats the default value-->
+        <option value = [RRULE:FREQ=WEEKLY]>Weekly</option>
+        <option value = [RRULE:FREQ=MONTHLY]>Monthly</option>
+        <option value = [RRULE:FREQ=YEARLY]>Annually</option>
+        <option value = [RRULE:BYDAY=MO,TU,WE,TH,FR]>Every Weekday (Monday to Friday)</option>
     <!-- <input type="radio" name="repeat_tag" id="repeat"> Does not repeat<br>
     <input type="radio" name="repeat_tag" id="repeat"> Weekly<br>
     <input type="radio" name="repeat_tag" id="repeat"> Monthly<br>
@@ -55,9 +55,9 @@
 
     <!--Busy-->
     <h3>Busy?</h3>
-    <select ng-model="data.busy" class= "form-control">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
+    <select ng-model="data.transparency" class= "form-control">
+        <option value="opaque">Yes</option>
+        <option value="transparent">No</option>
     </select>
 
         <div class="btn-group">
