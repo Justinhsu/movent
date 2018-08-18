@@ -13,9 +13,10 @@
 
 
   app.controller('pageController', function($http, $scope, $interval, $timeout) {
+    
     $scope.data = {
       summary: "",
-      color: "",
+      eventColor: "",
       start: {
         dateTime: null,
       },
